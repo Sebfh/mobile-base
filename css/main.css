@@ -1,0 +1,268 @@
+﻿/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+a {
+    color: #00e;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #06e;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*sliding menu stuff!! */
+.page { position: absolute; top: 0; left: 0; background: #fff; width: 100%; }
+.navbtn { 
+    background: transparent; 
+    border-bottom: 10px double #121212; 
+    border-top: 3px solid #121212;
+    height: 4px; 
+    width: 20px;
+    display: block;
+}
+#menu { width: 165px; display: block; height: 100%;}
+#menu h3 {
+    font-family: arial;
+    font-size: 12px;
+    color: white;
+    margin: 0;
+    background-color: #5A5959;
+    padding: 4px 0 4px 10px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(90, 89, 89, 1)), color-stop(85%,rgba(66, 65, 65, 1)));
+    border-top: solid #6B6B6B 1px;
+    border-bottom: solid #3D3D3D 1px;
+    text-shadow: 0px -1px 1px #333;
+}
+#menu ul li a:link, #menu ul li a:visited {
+    border-bottom: solid #333 1px;
+    box-shadow: 0 1px 0 #727272;
+    color: white;
+    font-size: 14px;
+    font-family: arial;
+    text-decoration: none;
+    width: 165px;
+    display: block;
+    padding: 10px 0px 10px 10px;
+    text-shadow: 0px 1px 1px black;
+}
+#menu ul {
+    margin: 0; padding: 0;
+}
+#menu ul li {
+    list-style-type: none;
+    margin: 0px 0;
+}
+.active {
+    color: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30, 29, 29, 1)), color-stop(21%,rgba(56, 55, 55, 1)));
+    text-shadow: 0px 1px 1px black;
+}
+
+/* Main page styling */
+html { height: 100%; }
+body { box-sizing: border-box; height: 100%; background: #5A5959 url('../img/menubg.gif') top left repeat-y;
+    position: relative; overflow-x: hidden;}
+.container {position: relative; overflow-x: hidden; height: 100%;}
+/*#usr_prof_avatar { position: absolute; top: 15px; right: 15px;}*/
+header { padding: 20px 20px 0;}
+section { padding: 20px;}
+h1 { font-weight: normal;}
+
+/* form styling */
+
+/* buttons & cubes */
+.big-button { padding: 10px; margin-bottom: 10px; background: #C90511; text-align: center;
+              display: block; box-sizing: border-box;}
+a.big-button {color: White; font-weight: bold; font-size: 1em; text-decoration: none; text-transform: lowercase;}
+.button-next { padding: 10px; float: right; background: #06E33D; text-align: center; width: 55%; box-sizing: border-box; margin: 15px -20px 0 0; box-sizing: border-box;}
+a.button-next {color: White; font-weight: bold; font-size: 1em; text-decoration: none;}
+.button-prev { padding: 10px; float: left; background: #009626; text-align: center; width: 55%; box-sizing: border-box; margin: 15px 0 0 -20px; box-sizing: border-box;}
+a.button-prev {color: White; font-weight: bold; font-size: 1em; text-decoration: none;}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Prevent callout */
+
+.nocallout {
+    -webkit-touch-callout: none;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.cf {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}
